@@ -12,6 +12,7 @@ app.get("/blog", (req, res) => {
   res.send("Hello Blog");
 });
 
+mongoose.set("strictQuery", false);
 mongoose
   .connect(
     "mongodb+srv://admin:password1224@cluster0.ujbgaqw.mongodb.net/node-api?retryWrites=true&w=majority"
